@@ -7,8 +7,8 @@ const ExcelJS = require("exceljs");
 const app = express();
 const PORT = 3010;
 
-const destinationFolder = path.join(__dirname, '../../Files/Contribution');
-const excelFilePath = path.join(__dirname, '../../Files/Contribution/contribution.xlsx');
+const destinationFolder = path.join(__dirname, '/Contribution');
+const excelFilePath = path.join(__dirname, '/Contribution/contribution.xlsx');
 
 if (!fs.existsSync(destinationFolder)) {
   fs.mkdirSync(destinationFolder);
