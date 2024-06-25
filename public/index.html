@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/ico" href="favicon.ico" />
+  <title>Contribution</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="https://www.kuet.ac.bd/">
+      <img src="/kuetlogo.png" alt="Logo" class="logo" />
+    </a>
+    <h1 style="font-family: Manrope, sans-serif; font-size: 30px; text-align: center;">
+      Contribution <span style="color: #00a651">Corner</span>
+    </h1>
+    <h6 style="text-align: center; font-family: Manrope, sans-serif">
+      [N.B:Your file will undergo review before being submitted to the website. Additionally, please ensure the accuracy of your form details. Files containing incorrect information will be promptly removed. Thank you for your attention to this matter.]
+    </h6>
+    <div class="spacer"></div>
+    <form id="myForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" name="nameInput" class="form-control" required style="font-family: Manrope, sans-serif" />
+      </div>
+      <div class="form-group">
+        <label for="batchInput">Batch:</label>
+        <input type="text" id="batchInput" name="batchInput" class="form-control" required style="font-family: Manrope, sans-serif" />
+      </div>
+      <div class="form-group">
+        <label for="resourceTypeInput">Resource Type:</label>
+        <select id="resourceTypeInput" name="resourceTypeInput" class="form-control" required style="font-family: Manrope, sans-serif">
+          <option value="">Select Resource Type</option>
+          <option value="Questions">Questions</option>
+          <option value="Lab Manuals">Lab Manuals</option>
+          <option value="Books">Books</option>
+          <option value="Notes">Notes</option>
+          <option value="Slideshows">Slideshows</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="courseNoInput">Course No.:</label>
+        <input type="text" id="courseNoInput" name="courseNoInput" class="form-control" required style="font-family: Manrope, sans-serif" />
+      </div>
+      <div class="form-group">
+        <label for="teacherNameInput">Course Teacher's Name:</label>
+        <input type="text" id="teacherNameInput" name="teacherNameInput" class="form-control" required style="font-family: Manrope, sans-serif" />
+      </div>
+      <input type="file" id="fileInput" name="fileInput" required style="font-family: Manrope, sans-serif" />
+      <button type="submit" id="submitButton" style="margin-top: 30px; font-family: Manrope, sans-serif">
+        Upload file
+      </button>
+      <div style="text-align: center; margin-top: 50px; text-decoration: none; font-size: 12px;">
+        ©2024, Designed and developed by
+        <a href="https://teamsiliconx.github.io/aboutus" style="color: #00a651; text-decoration: none;">
+          Siliconx Softwares
+        </a>
+        (ECE, KUET). Powered by Central Computer Center(KUET). All rights reserved.
+      </div>
+    </form>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

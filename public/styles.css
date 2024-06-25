@@ -1,0 +1,128 @@
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+body {
+  background-image: linear-gradient(
+        75deg,
+        rgb(6 6 6 / 80%) 8%,
+        transparent
+      ),
+      url("st.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Manrope', sans-serif;
+  transition: background-image 0.6s ease; /* Added transition for background-image */
+}
+
+
+  .spacer {
+    margin-bottom: 50px;
+    margin-top: 20px; /* Adjust the value as needed */
+  }
+  .container {
+    background-color: white;
+    padding: 30px;
+    border: 20px #000000;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 30px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Removed transition for background-image */
+  }
+  .logo {
+    position: center; /* Position the logo */
+    top: 40px; /* Adjust top position as needed */
+    left: 40px; /* Adjust left position as needed */
+    width: 60px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .container img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group {
+    margin-bottom: 30px;
+  }
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="file"],
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  input[type="file"] {
+    cursor: pointer;
+  }
+  button[type="submit"] { /* Change to submit */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #00a651;
+    color: white;
+    cursor: pointer;
+  }
+  button[type="submit"]:hover {
+    background-color: #0ad36b;
+  }
+  .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  .please-wait-text {
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    margin-top: 10px;
+  }
+  .design-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+  }
+
+  @media(width < 768px)
+  {
+    body{
+      background-image: none;
+    }
+  
+    .container {
+      background-color: white;
+      padding: 15px;
+      border: white;
+      border-radius: 30px;
+      box-shadow: none;
+      max-width: 400px;
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+     }
+     .container:hover {
+      transform: scale(1);
+      background-color: white;
+      padding: 15px;
+      border: white;
+      border-radius: 30px;
+      box-shadow: none;
+    }
+   
+  }

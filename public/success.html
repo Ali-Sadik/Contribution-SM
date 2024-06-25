@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Success</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+    body {
+      background-image: linear-gradient(
+        75deg,
+        rgb(6 6 6 / 80%) 8%,
+        transparent
+      ),
+      url("st.png");
+      background-size: cover;
+      background-position: top;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Manrope', sans-serif;
+      margin: 0;
+      position: relative;
+    }
+
+    #title {
+      font-size: 24px;
+      font-weight: 600;
+      text-align: left;
+      color: white;
+      position: absolute;
+      top: 10px;
+      left: 80px;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: auto;
+      margin-top: 15px;
+    }
+
+    h1 {
+      color: #00a651;
+      font-size: 30px;
+      margin-bottom: 20px;
+      margin-top: -10px;
+    }
+
+    p {
+      color: black;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .btn1 {
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: transform ease 0.3s;
+      margin-left: -30px;
+      margin-right: 10px;
+    }
+
+    .btn2 {
+      background: #00a651;
+      color: #fff;
+      margin-right: -20px;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: transform ease 0.3s;
+    }
+
+    .btn1:hover {
+      background: #1e5086;
+      transform: scale(1.05);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .btn2:hover {
+      background: #166e41;
+      transform: scale(1.05);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: transparent;
+        padding: 10px 0;
+        color: black;
+        font-size: 12px;
+      }
+
+      @media(width < 768px)
+      {
+        body
+        {
+            height: 93vh;
+        }
+     
+        #title
+        {
+            display: none;
+        }
+        .card
+        {
+            margin-top: -60px;
+            box-shadow: none;
+            border-radius: 20px;
+            padding: 30px 30px;
+            max-width: 300px;
+        }
+        .btn1,.btn2
+        {
+            padding: 10px 8px;
+            border-radius: 5px;
+            gap: 2px;
+            font-size: 15px;
+        }
+        .btn1
+        {
+            margin: auto;
+        }
+        .btn2
+        {
+            margin: auto;
+        }
+        h1
+        {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        p
+        {
+            text-align: justify;
+            font-size: 12px;
+        }
+      }
+      .footer
+      {
+        font-size: 10px;
+        text-align: center;
+      }
+  </style>
+</head>
+<body>
+  <section>
+    <div id="title">
+      <h2>Study<span style="color: #00a651">Materials</span></h2>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="card">
+      <h1>File Uploaded Successfully!</h1>
+      <p>Your file has been successfully uploaded and will undergo a review by our moderation team. This review process may take a few hours. You will be notified via email once the review is complete. Thank you for your valuable contribution.</p>
+      <a href="/" class="btn1">Upload more files</a>
+      <a href="/" class="btn2">Return to homepage</a>
+    </div>
+  </div>
+  <div class="footer">
+    ©2024, Designed and developed by
+    <a
+      href="https://teamsiliconx.github.io/aboutus"
+      style="color: black; text-decoration: none;"
+      >Siliconx Softwares</a
+    >(ECE, KUET). Powered by Central Computer Center(KUET). All rights reserved.
+  </div>
+</body>
+</html>
