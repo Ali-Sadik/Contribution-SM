@@ -25,3 +25,31 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   };
   xhr.send(formData);
 });
+
+// Function to show modal
+function showModal() {
+  const modal = document.getElementById("myModal");
+  modal.style.display = "block";
+
+  // Close modal when clicking on the close button (×)
+  const closeButton = document.getElementsByClassName("close")[0];
+  closeButton.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // Close modal when clicking outside the modal content
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
+// Update your existing upload event listener to show the modal
+document.getElementById("myForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form submission to another page
+  showProgressBar(function () {
+    showModal(); // Show modal after progress bar finishes
+  });
+});
+
