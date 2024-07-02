@@ -1,65 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/ico" href="favicon.ico" />
-  <title>Contribution</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="container">
-    <a href="https://www.kuet.ac.bd/">
-      <img src="/kuetlogo.png" alt="Logo" class="logo" />
-    </a>
-    <h1 style="font-family: Manrope, sans-serif; font-size: 30px; text-align: center;">
-      Contribution <span style="color: #00a651">Corner</span>
-    </h1>
-    <h6 style="text-align: center; font-family: Manrope, sans-serif">
-      [N.B:Your file will undergo review before being submitted to the website. Additionally, please ensure the accuracy of your form details. Files containing incorrect information will be promptly removed. Thank you for your attention to this matter.]
-    </h6>
-    <div class="spacer"></div>
-    <form id="myForm" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" name="nameInput" class="form-control" required style="font-family: Manrope, sans-serif" />
-      </div>
-      <div class="form-group">
-        <label for="batchInput">Batch:</label>
-        <input type="text" id="batchInput" name="batchInput" class="form-control" required style="font-family: Manrope, sans-serif" />
-      </div>
-      <div class="form-group">
-        <label for="resourceTypeInput">Resource Type:</label>
-        <select id="resourceTypeInput" name="resourceTypeInput" class="form-control" required style="font-family: Manrope, sans-serif">
-          <option value="">Select Resource Type</option>
-          <option value="Questions">Questions</option>
-          <option value="Lab Manuals">Lab Manuals</option>
-          <option value="Books">Books</option>
-          <option value="Notes">Notes</option>
-          <option value="Slideshows">Slideshows</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="courseNoInput">Course No.:</label>
-        <input type="text" id="courseNoInput" name="courseNoInput" class="form-control" required style="font-family: Manrope, sans-serif" />
-      </div>
-      <div class="form-group">
-        <label for="teacherNameInput">Course Teacher's Name:</label>
-        <input type="text" id="teacherNameInput" name="teacherNameInput" class="form-control" required style="font-family: Manrope, sans-serif" />
-      </div>
-      <input type="file" id="fileInput" name="fileInput" required style="font-family: Manrope, sans-serif" />
-      <button type="submit" id="submitButton" style="margin-top: 30px; font-family: Manrope, sans-serif">
-        Upload file
-      </button>
-      <div style="text-align: center; margin-top: 50px; text-decoration: none; font-size: 12px;">
-        ©2024, Designed and developed by
-        <a href="https://teamsiliconx.github.io/aboutus" style="color: #00a651; text-decoration: none;">
-          Siliconx Softwares
-        </a>
-        (ECE, KUET). Powered by Central Computer Center(KUET). All rights reserved.
-      </div>
-    </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <title>Contribution</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div class="container">
+      <a href="https://www.kuet.ac.bd/">
+        <img
+          src="kuetlogo.png"
+          alt="Logo"
+          class="logo"
+        />
+      </a>
+      <h1
+        style="
+          font-family: Manrope, sans-serif;
+          font-size: 30px;
+          text-align: center;
+        "
+      >
+        Contribution <span style="color: #00a651">Corner</span>
+      </h1>
+      <h6 style="text-align: center; font-family: Manrope, sans-serif">
+        [N.B:Your file will undergo review before being submitted to the
+        website. Additionally, please ensure the accuracy of your form details.
+        Files containing incorrect information will be promptly removed. Thank
+        you for your attention to this matter.]
+      </h6>
+      <div class="spacer"></div>
+      <form id="myForm" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="nameInput">Name:</label>
+          <input
+            type="text"
+            id="nameInput"
+            name="nameInput"
+            class="form-control"
+            required
+            style="font-family: Manrope, sans-serif"
+          />
+        </div>
+        <div class="form-group">
+          <label for="batchInput">Batch:</label>
+          <input
+            type="text"
+            id="batchInput"
+            name="batchInput"
+            class="form-control"
+            required
+            style="font-family: Manrope, sans-serif"
+          />
+        </div>
+        <div class="form-group">
+          <label for="resourceTypeInput">Resource Type:</label>
+          <select
+            id="resourceTypeInput"
+            name="resourceTypeInput"
+            class="form-controlreso"
+            required
+            style="font-family: Manrope, sans-serif"
+          >
+            <option value="">Select Resource Type</option>
+            <option value="Questions">Questions</option>
+            <option value="Lab Manuals">Lab Manuals</option>
+            <option value="Books">Books</option>
+            <option value="Notes">Notes</option>
+            <option value="Slideshows">Slideshows</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="courseNoInput">Course No.:</label>
+          <input
+            type="text"
+            id="courseNoInput"
+            name="courseNoInput"
+            class="form-control"
+            required
+            style="font-family: Manrope, sans-serif"
+          />
+        </div>
+        <div class="form-group">
+          <label for="teacherNameInput">Course Teacher's Name:</label>
+          <input
+            type="text"
+            id="teacherNameInput"
+            name="teacherNameInput"
+            class="form-control"
+            required
+            style="font-family: Manrope, sans-serif"
+          />
+        </div>
+        <input
+          type="file"
+          id="fileInput"
+          name="fileInput"
+          required
+          style="font-family: Manrope, sans-serif"
+        />
+        <button
+          type="submit"
+          id="submitButton"
+          style="margin-top: 30px; font-family: Manrope, sans-serif"
+        >
+          Upload file
+        </button>
+        <div
+          class="footer"
+        >
+          ©2024, Designed and developed by
+          <a
+            href="https://teamsiliconx.github.io/aboutus"
+            style="color: #00a651; text-decoration: none"
+          >
+            Siliconx Softwares
+          </a>
+          (ECE, KUET). Powered by Central Computer Center(KUET). All rights
+          reserved.
+        </div>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <p class="darktext">Dark mode</p>
+      <label class="toggle-switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <script src="scripts.js"></script>
+    <script>
+       // Function to show progress bar for 1 second
+    function showProgressBar(callback) {
+        // Show progress bar
+        document.getElementById("progress-bar").style.display = "block";
+
+        // Hide progress bar after 1 second
+        setTimeout(function () {
+          document.getElementById("progress-bar").style.display = "none";
+          if (callback) {
+            callback(); // Execute callback function
+          }
+        }, 1000);
+      }
+      window.addEventListener("load", function () {
+        showProgressBar(); // Show progress bar on page load
+      });
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const toggleButton = document.getElementById("theme-toggle");
+
+        // Function to set theme
+        const setTheme = (theme) => {
+          if (theme === "dark-mode") {
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+            toggleButton.checked = true;
+          } else {
+            document.body.classList.remove("dark-mode");
+            document.body.classList.add("light-mode");
+            toggleButton.checked = false;
+          }
+          updateScrollbarColor(theme); // Update scrollbar color based on theme
+        };
+
+        // Function to detect and apply system theme preference
+        const applySystemThemePreference = () => {
+          const prefersDarkScheme = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          setTheme(prefersDarkScheme ? "dark-mode" : "light-mode");
+        };
+
+        // Load user's theme preference from localStorage
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme) {
+          setTheme(currentTheme);
+        } else {
+          applySystemThemePreference(); // Apply system theme preference initially
+        }
+
+        // Listen for changes in the theme toggle button
+        toggleButton.addEventListener("change", () => {
+          const newTheme = toggleButton.checked ? "dark-mode" : "light-mode";
+          setTheme(newTheme);
+          // Save user's preference to localStorage
+          if (newTheme === "dark-mode") {
+            localStorage.setItem("theme", "dark-mode");
+          } else {
+            localStorage.removeItem("theme");
+          }
+        });
+
+        // Listen for changes in system theme preference
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", (e) => {
+            if (!localStorage.getItem("theme")) {
+              // Only change if user has not set a preference
+              applySystemThemePreference();
+            }
+          });
+
+        // Function to update scrollbar color based on theme
+        const updateScrollbarColor = (theme) => {
+          // Determine the scrollbar thumb color based on the theme
+          const scrollbarThumbColor = theme === "dark-mode" ? "#333" : "#ccc";
+          // Set the scrollbar thumb color dynamically using CSS variables
+          document.documentElement.style.setProperty(
+            "--scrollbar-thumb-color",
+            scrollbarThumbColor
+          );
+        };
+      });
+    </script>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>File uploaded successfully!</h1>
+    <p>Your file has been successfully uploaded and will undergo a review by our moderation team. This review process may take a few hours. You will be notified via email once the review is complete. Thank you for your valuable contribution.</p>
   </div>
-  <script src="scripts.js"></script>
-</body>
+</div>
+  </body>
 </html>
