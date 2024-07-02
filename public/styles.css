@@ -1,13 +1,8 @@
-/* styles.css */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
 
 body {
-  background-image: linear-gradient(
-        75deg,
-        rgb(6 6 6 / 80%) 8%,
-        transparent
-      ),
-      url("st.png");
+  background-image: linear-gradient(75deg, rgb(6 6 6 / 80%) 8%, transparent),
+    url("st.png");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -16,113 +11,418 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Manrope', sans-serif;
-  transition: background-image 0.6s ease; /* Added transition for background-image */
+  font-family: "Manrope", sans-serif;
+  transition: background-image 0.6s ease;
+  color: #333;
+}
+
+/* Default scrollbar styles */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color, #ccc);
+  border-radius: 6px;
+}
+
+/* Dark mode scrollbar styles */
+body.dark-mode::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color, #333);
+}
+
+/* Light mode scrollbar styles */
+body.light-mode::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color, #ccc);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode .container {
+  background-color: #0a0a0a;
+  color: #cccccc;
+  border: 1px solid #888;
+}
+
+body.dark-mode .container:hover {
+  box-shadow: none;
+}
+
+/* Form styles */
+.container {
+  background-color: white;
+  padding: 30px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin-top: 30px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+body.dark-mode .container {
+  background-color: #0a0a0a;
+  color: #cccccc;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 60px;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+select:focus {
+  border-color: #00a651;
+  box-shadow: 0 0 5px rgba(0, 166, 81, 0.5);
+}
+
+input[type="file"] {
+  cursor: pointer;
+}
+
+/* Placeholder animation */
+input[type="text"]::placeholder,
+select::placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+input[type="text"]:focus::placeholder,
+select:focus::placeholder {
+  opacity: 0.5;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00a651;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0ad36b;
+  transform: scale(1.05);
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.please-wait-text {
+  text-align: center;
+  font-weight: bold;
+  display: none;
+  margin-top: 10px;
+}
+
+.design-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Dark mode form elements */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="file"],
+body.dark-mode select {
+  background-color: #0a0a0a;
+  color: #cccccc;
+  border: 1px solid #333;
+}
+
+body.dark-mode button[type="submit"] {
+  background-color: #00a651;
+}
+
+body.dark-mode button[type="submit"]:hover {
+  background-color: #0ad36b;
+}
+
+body.dark-mode .alert-success {
+  background-color: #0a0a0a;
+  color: #cccccc;
+}
+
+body.dark-mode .please-wait-text,
+body.dark-mode .design-text {
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+
+  .container {
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .container:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .footer {
+    font-size: 8px;
+  }
+}
+
+/* Toggle Switch Styles */
+.toggle-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00a651;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+#progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+#progress-bar {
+  height: 4px;
+  background-color: #00a651;
+  width: 0;
+  animation: progressBarAnimation 1s forwards;
+}
+
+@keyframes progressBarAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.form-control {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode .form-control {
+  background-color: black;
+  color: white;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dim background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 75%;
+  left: 76%;
+  animation-name: modal-open;
+  animation-duration: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 320px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body.dark-mode .modal-content {
+    max-width: 320px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body.dark-mode .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  .modal p {
+    font-size: 12px;
+  }
 }
 
 
-  .spacer {
-    margin-bottom: 50px;
-    margin-top: 20px; /* Adjust the value as needed */
-  }
-  .container {
-    background-color: white;
-    padding: 30px;
-    border: 20px #000000;
-    border-radius: 12px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    margin-top: 30px;
-    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Removed transition for background-image */
-  }
-  .logo {
-    position: center; /* Position the logo */
-    top: 40px; /* Adjust top position as needed */
-    left: 40px; /* Adjust left position as needed */
-    width: 60px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
-  .container img {
-    display: block;
-    margin: 0 auto 20px;
-    border-radius: 5px;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  .form-group {
-    margin-bottom: 30px;
-  }
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  input[type="text"],
-  input[type="file"],
-  select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-  }
-  input[type="file"] {
-    cursor: pointer;
-  }
-  button[type="submit"] { /* Change to submit */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    background-color: #00a651;
-    color: white;
-    cursor: pointer;
-  }
-  button[type="submit"]:hover {
-    background-color: #0ad36b;
-  }
-  .alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 20px;
-  }
-  .please-wait-text {
-    text-align: center;
-    font-weight: bold;
-    display: none;
-    margin-top: 10px;
-  }
-  .design-text {
-    text-align: center;
-    margin-top: 20px;
-    color: #000000;
-  }
+.modal h1 {
+  font-size: 20px;
+  color: #00a651;
+  margin-bottom: 20px;
+}
 
-  @media(width < 768px)
-  {
-    body{
-      background-image: none;
-    }
-  
-    .container {
-      background-color: white;
-      padding: 15px;
-      border: white;
-      border-radius: 30px;
-      box-shadow: none;
-      max-width: 400px;
-      width: 100%;
-      margin-top: 0px;
-      margin-bottom: 0px;
-     }
-     .container:hover {
-      transform: scale(1);
-      background-color: white;
-      padding: 15px;
-      border: white;
-      border-radius: 30px;
-      box-shadow: none;
-    }
-   
+.modal p {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Modal close button (×) */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal animation */
+@keyframes modal-open {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+body.dark-mode .modal-content {
+  background-color: #0a0a0a;
+  color: #cccccc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+body.dark-mode .modal h1 {
+  color: #00a651;
+}
+
+body.dark-mode .modal p {
+  color: #cccccc;
+}
+
+body.dark-mode .close:hover,
+.close:focus {
+  color: #cccccc;
+  text-decoration: none;
+  cursor: pointer;
+}
